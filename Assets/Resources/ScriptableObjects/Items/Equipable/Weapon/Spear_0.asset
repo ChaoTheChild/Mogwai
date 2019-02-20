@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82ac0030344cfc644832182c8375001a, type: 3}
-  m_Name: Axe_0
+  m_Name: Spear_0
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 9f03f87da637dd64db1e5e4fccf32642, type: 3}
-  stackNum: 1
+  icon: {fileID: 21300000, guid: ac36ed97500e746ccb0882b66f119c5a, type: 3}
+  stackNum: 10
   isYin: 0
   dropChance: 0
   bornBiome: {fileID: 0}
   yinItem: {fileID: 11400000, guid: ee47c80719cd09a4e82f4bdecdd1394d, type: 2}
   yangItem: {fileID: 11400000, guid: 6f126ebdb9e414fe98735977f5a7e6ba, type: 2}
-  attackDamageOnTrees: 10
-  attackDamageOnCreature: 5
-  attackDamageOnRock: 4
+  attackDamageOnTrees: 1
+  attackDamageOnCreature: 10
+  attackDamageOnRock: 1

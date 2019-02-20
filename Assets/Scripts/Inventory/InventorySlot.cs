@@ -35,6 +35,13 @@ public class InventorySlot : MonoBehaviour
 
     }
 
+    public void AddStackedItem(Item newItem, int stakNum){
+        AddNewItem(newItem);
+        for(int i =0; i< stackNum -1; i++){
+            AddItem();
+        }
+    }
+
     public void RemoveItem(){
         if(stackNum <= 1){
             ClearSlot();

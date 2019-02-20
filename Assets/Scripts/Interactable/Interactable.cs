@@ -18,7 +18,7 @@ public class Interactable : MonoBehaviour
         this.interactObject = equippedWeapon;
          float distance = Vector3.Distance(playerTransform.position, transform.position);
             if(distance <= radius){
-                Debug.Log("Interact");
+                //Debug.Log("Interact");
                 Interact();
             }
         

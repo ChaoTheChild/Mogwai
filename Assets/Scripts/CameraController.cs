@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
@@ -26,7 +27,10 @@ public class CameraController : MonoBehaviour
             angle = -90;
             OrbitAround(angle);
         }
+
         if(Input.GetAxis("Mouse ScrollWheel") != 0){
+                  if(!EventSystem.current.IsPointerOverGameObject()){
+
             float y = Input.GetAxis("Mouse ScrollWheel");
 
             if(y<0 && thisCamera.fieldOfView > minField){
@@ -34,7 +38,7 @@ public class CameraController : MonoBehaviour
             }
             if(y>0 &&  thisCamera.fieldOfView < maxField)
                  thisCamera.fieldOfView += y*sensitivity;
-            
+                  }
         }
 
        

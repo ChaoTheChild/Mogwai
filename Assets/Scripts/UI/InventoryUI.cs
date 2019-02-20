@@ -5,6 +5,7 @@ public class InventoryUI : MonoBehaviour
 {   
     public Transform itemParent;
     public InventorySlot[] slots;
+    public RectTransform[] slotsTransform;
 
      public GameObject startSlot;
     [SerializeField] 
@@ -12,12 +13,17 @@ public class InventoryUI : MonoBehaviour
     public GameObject endSlot;
      public bool itemTransferred = false;
      public Item draggedItem;
+     public int draggedNum;
 
 
     // Start is called before the first frame update
     void Start()
     {
            slots = itemParent.GetComponentsInChildren<InventorySlot>();
+           slotsTransform = new RectTransform[slots.Length];
+           for(int i = 0; i<slots.Length; i++){
+               slotsTransform[i] = slots[i].transform as RectTransform;
+           }
     }
 
     // Update is called once per frame
@@ -41,6 +47,6 @@ public class InventoryUI : MonoBehaviour
              }       
         return false;
     }
-    
+
    
 }
