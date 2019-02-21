@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   biomeName: Paper
   Type: 1
-  destroyables:
-  - {fileID: 0}
+  trees:
+  - {fileID: 11400000, guid: ecfdc39dd0d62a7468423193f14d8738, type: 2}

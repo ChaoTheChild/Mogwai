@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   biomeName: Water
   Type: 4
-  destroyables:
-  - {fileID: 0}
+  trees:
+  - {fileID: 11400000, guid: 206c745c5fbca444795b7e9c3afd648d, type: 2}
