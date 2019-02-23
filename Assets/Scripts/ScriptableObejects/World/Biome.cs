@@ -10,6 +10,8 @@ public class Biome : ScriptableObject
     Vector2 centerPosition;
     public List<Unit> units = new List<Unit>();
     public List<Tree> trees = new List<Tree>();
+
+     
    
   
 }

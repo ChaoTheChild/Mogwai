@@ -8,15 +8,16 @@ public abstract class Object : ScriptableObject
     public GameObject dropped;
     [Range (0,1)]
     public float bornChance;
+    public int bornNum;
 
   
     public virtual void DropItem(Vector3 position){
-        Debug.Log("drop item");
+       // Debug.Log("drop item");
 
         for(int i=0; i<dropItems.Length; i++){
 
             GameObject dropItem = Instantiate(dropped);
-            dropItem.transform.position = position;
+            dropItem.transform.position = new Vector3 (position.x+Random.Range(-2,2),position.y,position.z + Random.Range(-2,2));
             dropItem.name = dropItems[i].name;
             ItemPickup itemPickUp = dropItem.GetComponent<ItemPickup>();
             itemPickUp.item = dropItems[i];

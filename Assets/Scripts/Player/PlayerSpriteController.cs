@@ -58,13 +58,13 @@ public class PlayerSpriteController : MonoBehaviour
             sprd[i].sortingOrder = baseOrder + 4;
             break;
             case "UpperArm_F_Sprite":
-            sprd[i].sortingOrder = baseOrder + 7;
+            sprd[i].sortingOrder = baseOrder + 4;
             break;
             case "LowerArm_F_Sprite":
-            sprd[i].sortingOrder = baseOrder + 6;
+            sprd[i].sortingOrder = baseOrder + 4;
             break;
             case "Hand_F_Sprite":
-            sprd[i].sortingOrder = baseOrder + 5;
+            sprd[i].sortingOrder = baseOrder + 4;
             break;
             case "Weapon_Sprite":
             sprd[i].sortingOrder = baseOrder + 4;

@@ -23,6 +23,9 @@ public class World: MonoBehaviour
     GameObject[,] unit_gos;
     GameObject[,] nature_gos;
 
+    public delegate void OnWorldChange();
+    public static event OnWorldChange OnWorldBuild;
+
 
 
     public void GenerateWorld(int unitX, int unitY, int numBiomeType,int numBiome){
@@ -37,7 +40,6 @@ public class World: MonoBehaviour
         unit_gos = new GameObject[unitX,unitY];
         biomeGos = new GameObject[numBiome];
         worldParent = new GameObject("worldParent");
-        SetBiomes();
        
     }
 
@@ -65,8 +67,6 @@ public class World: MonoBehaviour
 
     }
 
-
-
 #region Render floorTiles
 
     public void SetBiomes(){
@@ -88,9 +88,7 @@ public class World: MonoBehaviour
             }
         }
         DefineBiomeForEachUnit();
-        RenderMap();
-        RenderTree();
-      
+  
 
     }
   
@@ -358,13 +356,19 @@ public class World: MonoBehaviour
 
 
 //render Tree
-void RenderTree(){
+public void RenderTrees(){
     GameObject tree_parent = new GameObject();
     tree_parent.name = "Trees"; 
     for(int i=0; i<numBiome; i++){
         for(int j = 0; j< biomes[i].trees.Count; j++){
         float bornChance = biomes[i].trees[j].bornChance;
-        int bornNum = Mathf.RoundToInt(biomeGos[i].transform.childCount*bornChance);
+        int bornNum = 0;
+        if(bornChance != 0){
+             bornNum = Mathf.RoundToInt(biomeGos[i].transform.childCount*bornChance);
+
+        }else {
+             bornNum =  biomes[i].trees[j].bornNum;
+        }
        // Debug.Log("gonna generate " + bornNum + biomes[i].destroyables[j]);
        
        GameObject parent_go = new GameObject();

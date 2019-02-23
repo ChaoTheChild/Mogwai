@@ -100,14 +100,16 @@ public class Player : Character
   void Interact(){
       if(!EventSystem.current.IsPointerOverGameObject()){
             Ray ray = maincamera.ScreenPointToRay(Input.mousePosition);
-            playerAnimator.SetInteger("PlayerStat",2);
           RaycastHit hit;
           if(Physics.Raycast(ray, out hit)){
               //if hit interactable
               //Debug.Log("Hit Collider");
               currentInteractable = hit.collider.GetComponent<Interactable>();
               if(currentInteractable != null){
+
                   currentInteractable.Onclicked(this.transform, equippedWeapon);
+                    playerAnimator.SetInteger("PlayerStat",2);
+
               }
           }
       

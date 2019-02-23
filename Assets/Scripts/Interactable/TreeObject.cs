@@ -28,7 +28,7 @@ public class TreeObject : ObjectDestroy
             StartCoroutine("Attacked");
         }else{
             //Debug.Log("health below zero");
-            destroyableObject.DropItem(transform.position);
+            //destroyableObject.DropItem(transform.position);
             treeAnimator.SetInteger("TreeStat",2);
             Invoke("Die",1);
             }
