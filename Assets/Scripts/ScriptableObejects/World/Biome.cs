@@ -11,7 +11,7 @@ public class Biome : ScriptableObject
     public List<Unit> units = new List<Unit>();
     public List<Tree> trees = new List<Tree>();
 
-     
+    public List<Mogwai> mogwais = new List<Mogwai>(); 
    
   
 }

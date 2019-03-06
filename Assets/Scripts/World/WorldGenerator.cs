@@ -5,47 +5,50 @@ using UnityEngine;
 public class WorldGenerator : MonoBehaviour
 {   
 
-    World world;
-   public static WorldGenerator instance;
+
+    public World world{get;set;}
 
     int unitX = 60;
     int unitY = 60;
     int numBiomeType = 6;
     int numBiome = 18;
+            public MonsterController monsterController;
+
     
     // Start is called before the first frame update
-       void Awake(){
-        if(instance == null){
-            instance = this;
-             DontDestroyOnLoad(this);
-        }else{
-            Destroy(this);
-        }
-
-    }
-    void Start()
+    public void GenerateWorld()
     {   
         
-        world = new World(); 
+        world = gameObject.GetComponent<World>();
+         monsterController = gameObject.GetComponent<MonsterController>();
+
         StartCoroutine("BuildWorldSeq");
+
         
+    }
+
+    public World GetWorld(){
+        return world;
     }
 
     IEnumerator BuildWorldSeq(){
   
         yield return StartCoroutine("LoadResources"); 
-        yield return StartCoroutine("GenerateWorld");
+        yield return StartCoroutine("CalculateWorld");
         yield return StartCoroutine("SetBiomes");
         yield return StartCoroutine("RenderMap");
         yield return StartCoroutine("RenderTrees");
+        yield return StartCoroutine("RenderMogwai");
+      //  yield return StartCoroutine("FinishWorldBuild");
     }
     
     IEnumerator LoadResources(){
          world.LoadResources();
-        Debug.Log("Loading Resources");
+         monsterController.LoadMonsterData();
+//        Debug.Log("Loading Resources");
         yield return null;
     }
-    IEnumerator GenerateWorld(){
+    IEnumerator CalculateWorld(){
         Debug.Log("Generating World");
 
         world.GenerateWorld(unitX,unitY,numBiomeType,numBiome);
@@ -70,6 +73,18 @@ public class WorldGenerator : MonoBehaviour
          Debug.Log("Rendering Trees");
 
         world.RenderTrees();
+        yield return null;
+    }
+
+    IEnumerator RenderMogwai(){
+        //Debug.Log("Rendering Mogwai");
+        monsterController.SpawnMogwai();
+        yield return null;
+    }
+
+    IEnumerator FinishWorldBuild(){
+
+        world.FinishUp();
         yield return null;
     }
   

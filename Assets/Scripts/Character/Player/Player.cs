@@ -21,6 +21,7 @@ public class Player : Character
      public delegate void OnPlayerChange();
     public static event OnPlayerChange OnPlayerMove;
 
+ 
     void Awake(){
         if(instance == null){
             instance = this;

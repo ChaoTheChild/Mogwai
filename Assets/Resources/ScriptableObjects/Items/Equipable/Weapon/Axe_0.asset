@@ -17,8 +17,6 @@ MonoBehaviour:
   isYin: 0
   dropChance: 0
   bornBiome: {fileID: 0}
-  yinItem: {fileID: 11400000, guid: ee47c80719cd09a4e82f4bdecdd1394d, type: 2}
-  yangItem: {fileID: 11400000, guid: 6f126ebdb9e414fe98735977f5a7e6ba, type: 2}
   attackDamageOnTrees: 10
-  attackDamageOnCreature: 5
+  attackDamageOnCreature: 3
   attackDamageOnRock: 4

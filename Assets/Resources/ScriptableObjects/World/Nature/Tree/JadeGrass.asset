@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99dbf11e9bff0de42aae462877dc5945, type: 3}
-  m_Name: Reed
+  m_Name: JadeGrass
   m_EditorClassIdentifier: 
-  health: 8
-  dropItems:
-  - {fileID: 11400000, guid: 0fb2b342834a9434abe483964998b93f, type: 2}
+  health: 20
+  dropItems: []
   dropped: {fileID: 1008016146726294791, guid: 24e6fc02687de554d846bca3accdcdcd, type: 3}
-  bornChance: 0.11
+  bornChance: 0.08
   bornNum: 0

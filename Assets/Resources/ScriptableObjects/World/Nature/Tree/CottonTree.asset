@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: CottonTree
   m_EditorClassIdentifier: 
   health: 44
-  dropItems: []
+  dropItems:
+  - {fileID: 11400000, guid: 2c5dc205357ef984d97776e3c2208365, type: 2}
   dropped: {fileID: 1008016146726294791, guid: 24e6fc02687de554d846bca3accdcdcd, type: 3}
   bornChance: 0.04
+  bornNum: 0

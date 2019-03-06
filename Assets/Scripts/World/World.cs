@@ -3,25 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class World: MonoBehaviour
-{
-    Unit[,] units;
+{   
+
+    public Unit[,] units;
     Biome[] stereopTypeBiome;
-    Biome[] biomes;
-    Vector2[] biomesCenter;
+    public Biome[] biomes;
+    public Vector2[] biomesCenter;
     int numBiome;
     int numBiomeType;
-    int unitX;
-    int unitY;
+    public int unitX{get;set;}
+    public int unitY{get;set;}
+    
     Dictionary<string, Sprite> tileSprite;
     Dictionary<string, List<Sprite>> treeSprites;
+
+    Dictionary<string,List<Sprite>> mogwaiSprites;
     Dictionary<string,Tree> treeData;
 
     GameObject worldParent;
     GameObject[] biomeGos;
 
     Dictionary<string, GameObject> worldPrefabDictionary;
-    GameObject[,] unit_gos;
+    public GameObject[,] unit_gos;
     GameObject[,] nature_gos;
+
 
     public delegate void OnWorldChange();
     public static event OnWorldChange OnWorldBuild;
@@ -40,6 +45,7 @@ public class World: MonoBehaviour
         unit_gos = new GameObject[unitX,unitY];
         biomeGos = new GameObject[numBiome];
         worldParent = new GameObject("worldParent");
+
        
     }
 
@@ -47,6 +53,7 @@ public class World: MonoBehaviour
         //Debug.Log("Loading Resources");
         tileSprite = new Dictionary<string,Sprite>();
         treeSprites = new Dictionary<string,List<Sprite>>();
+        mogwaiSprites = new Dictionary<string,List<Sprite>>();
         
         treeData = new Dictionary<string,Tree>();
 
@@ -57,6 +64,7 @@ public class World: MonoBehaviour
             tileSprite[s.name] = s;
         }
         treeSprites = ResourceManagement.SetUpSpriteDictionary("Sprites/World/Nature/Trees",treeSprites);
+        //mogwaiSprites = ResourceManagement.SetUpSpriteDictionary("Sprites/Character/Mogwai", mogwaiSprites);
   
         worldPrefabDictionary = ResourceManagement.SetUpPrefabDictionary("Prefabs/World");
 
@@ -171,7 +179,6 @@ public class World: MonoBehaviour
             }
         }
         
-
 
     }
 
@@ -352,6 +359,7 @@ public class World: MonoBehaviour
     }
     unit_gos[x,y].transform.position += new Vector3(0,units[x,y].ID *0.01f,0);
     }
+
 #endregion
 
 
@@ -396,5 +404,11 @@ public void RenderTrees(){
     
 
 }
+
+
+public void FinishUp(){
+    OnWorldBuild();
+}
+
   
 }

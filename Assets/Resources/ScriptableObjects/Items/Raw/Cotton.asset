@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6788dd652b450e94fa6c697b6c495081, type: 3}
-  m_Name: Jade
+  m_Script: {fileID: 11500000, guid: ba24f20be0b892740a26facf6fae32e5, type: 3}
+  m_Name: Cotton
   m_EditorClassIdentifier: 
-  biomeName: Jade
-  Type: 3
-  trees:
-  - {fileID: 11400000, guid: 9f9275ff1be14dc41a801a8318c590fb, type: 2}
+  icon: {fileID: 21300000, guid: 2266bc74d18becd43af0e48dca875a31, type: 3}
+  stackNum: 10
+  isYin: 0
+  dropChance: 0
+  bornBiome: {fileID: 0}
