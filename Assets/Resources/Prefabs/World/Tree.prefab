@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 93654863123303660}
   - component: {fileID: 7829164653464113354}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 5304529693131572348}
   - component: {fileID: 6654434178645643931}
   - component: {fileID: 2306208918974300665}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactObject: {fileID: 0}
   destroyableObject: {fileID: 0}
+  itemPickupPrefab: {fileID: 0}
   health: 0
 --- !u!95 &2306208918974300665
 Animator:

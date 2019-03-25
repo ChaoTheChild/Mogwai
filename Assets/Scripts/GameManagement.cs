@@ -5,12 +5,10 @@ using UnityEngine;
 public class GameManagement : MonoBehaviour
 {
     WorldGenerator worldGenerator;
-    MapPooling mapPool;
 
 
     void Start(){
         worldGenerator = GameObject.Find("WorldGenerator").GetComponent<WorldGenerator>();
-        mapPool = gameObject.GetComponent<MapPooling>();
         StartCoroutine("StartGame");
     }
 
@@ -20,9 +18,4 @@ public class GameManagement : MonoBehaviour
         yield return null;
     }
          
-    IEnumerator MapPool(){
-        Debug.Log("map pool time");
-        mapPool.DisableAll();
-        yield return null;
-    }
 }

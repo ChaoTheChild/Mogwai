@@ -15,20 +15,21 @@ public class Mogwai : ScriptableObject
 
         public int relationshipWithPlayer; 
         
-        public Biome spawnBiome;
-
         [Range(0,0.5f)]
         public float spawnChance;
 
         public int spawnNum;
 
-        public int detectDis = 10;
+        public int detectDis = 30;
+        public int damageDis = 5;
 
         public int idleSpeed;
 
         public int chaseSpeed;
 
 
+        public float attackCd;
+        public float chaseCd;
 
 
 }

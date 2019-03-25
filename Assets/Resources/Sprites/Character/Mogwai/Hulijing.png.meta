@@ -1,0 +1,603 @@
+fileFormatVersion: 2
+guid: 00d6035fc72811a419171c93bd961180
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Hulijing_Head
+    21300002: Hulijing_EarL_1
+    21300004: Hulijing_EarL_2
+    21300006: Hulijing_EarR_1
+    21300008: Hulijing_EarR_2
+    21300010: Hulijing_EyeL
+    21300012: Hulijing_EyeR
+    21300014: Hulijing_Tail1
+    21300016: Hulijing_Tail2
+    21300018: Hulijing_Scarf
+    21300020: Hulijing_Leg1
+    21300022: Hulijing_Leg2
+    21300024: Hulijing_Leg3
+    21300026: Hulijing_Body1
+    21300028: Hulijing_Body2
+    21300030: Hulijing_BeardL_1
+    21300032: Hulijing_BeardL_2
+    21300034: Hulijing__BeardL_3
+    21300036: Hulijing__BeardL_4
+    21300038: Hulijing__BeardL_5
+    21300040: Hulijing_BeardR_1
+    21300042: Hulijing_BeardR_2
+    21300044: Hulijing_BeardR_3
+    21300046: Hulijing_BeardR_4
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hulijing_Head
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 770
+        width: 180
+        height: 125
+      alignment: 9
+      pivot: {x: 0.42315945, y: 0.14038867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0f2456178bda04f9e6e41010b0c919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_EarL_1
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 540
+        width: 94
+        height: 82
+      alignment: 9
+      pivot: {x: 0.7204343, y: 0.18785058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5022aeb1c725a0469bfbd896fe46848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_EarL_2
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 743
+        width: 87
+        height: 185
+      alignment: 9
+      pivot: {x: 0.5517375, y: 0.0690014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f01571b69a53644b764cb9cf232880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_EarR_1
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 543
+        width: 67
+        height: 70
+      alignment: 9
+      pivot: {x: 0.31323788, y: 0.1847351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685b7d3f3b94b084d998900e9c4b70c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_EarR_2
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 752
+        width: 66
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5206835, y: 0.10182699}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0340ebf4ac68ff44b3b936e4710eb79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_EyeL
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 551
+        width: 57
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5492832, y: 0.440231}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcad06f0552d9f43853b2cd63141229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_EyeR
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 554
+        width: 22
+        height: 41
+      alignment: 9
+      pivot: {x: 0.49999446, y: 0.3932123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6720522b2112e4cb03e9bb959b4a95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_Tail1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 697
+        width: 102
+        height: 247
+      alignment: 9
+      pivot: {x: 0.56086075, y: 0.01410184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b57ee07f4994414c8d6ffabc4808102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_Tail2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 695
+        width: 227
+        height: 257
+      alignment: 9
+      pivot: {x: 0.93101746, y: 0.7511027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95e1299af577f54fba52c07e54cc975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_Scarf
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 454
+        width: 114
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5353412, y: 0.7831385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46e9e6330aca2c49a0e8942b463ade6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_Leg1
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 218
+        width: 33
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9175136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f93122260bade45bab5e0ad0340f7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_Leg2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 210
+        width: 41
+        height: 119
+      alignment: 9
+      pivot: {x: 0.48607132, y: 0.90788925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec84231731da7343ae389be5263c8a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_Leg3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 210
+        width: 39
+        height: 122
+      alignment: 9
+      pivot: {x: 0.514642, y: 0.9212629}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1afdc87a52c95a4083702c7b117abc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_Body1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 68
+        width: 76
+        height: 47
+      alignment: 9
+      pivot: {x: 0.8811842, y: 0.65209395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85550087e08b9e4ebfa5428213c63e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_Body2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 69
+        width: 95
+        height: 41
+      alignment: 9
+      pivot: {x: 0.90675306, y: 0.53660065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b38e3ed8d9fce449fc4e23fb78e4ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_BeardL_1
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 310
+        width: 109
+        height: 87
+      alignment: 9
+      pivot: {x: 0.9333513, y: 0.08028403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcb634b251133644bfdcba972d4e4e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_BeardL_2
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 229
+        width: 72
+        height: 46
+      alignment: 9
+      pivot: {x: 0.88687134, y: 0.17200105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae784be1431e7b4fa4dd5bd09c50c4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing__BeardL_3
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 153
+        width: 94
+        height: 39
+      alignment: 9
+      pivot: {x: 0.9350969, y: 0.20037177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367baa43331b94044a1a56da4c3cd892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing__BeardL_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 84
+        width: 71
+        height: 17
+      alignment: 9
+      pivot: {x: 0.9489204, y: 0.7325453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cd9d94fd7969c4f9043e1d61fbb99b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing__BeardL_5
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 25
+        width: 84
+        height: 23
+      alignment: 9
+      pivot: {x: 0.9559217, y: 0.2529204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79f36fb50933ee49a93326c805961bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_BeardR_1
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 345
+        width: 65
+        height: 41
+      alignment: 9
+      pivot: {x: 0.09256554, y: 0.13576762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e125e82c6e438245926484bb6875842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_BeardR_2
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 256
+        width: 70
+        height: 23
+      alignment: 9
+      pivot: {x: 0.06380441, y: 0.25661567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257651723a8a6d6428078155bb7f7cbd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_BeardR_3
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 177
+        width: 72
+        height: 13
+      alignment: 9
+      pivot: {x: 0.06792789, y: 0.48144883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebd3f664c42e294c98f8cb7c6681db5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hulijing_BeardR_4
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 82
+        width: 75
+        height: 16
+      alignment: 9
+      pivot: {x: 0.060187176, y: 0.7103715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ec1d899a3be3946b437d71d4b98a3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a61bf6ba53e26d344b21a082be3bf2a0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

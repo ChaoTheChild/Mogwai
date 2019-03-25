@@ -1,0 +1,1149 @@
+fileFormatVersion: 2
+guid: d350fe9926aaf914196450b713250637
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Changfu_Eye_1
+    21300002: Changfu_Peak_1
+    21300004: Changfu_Crest_1_1
+    21300006: Changfu_Crest_1_2
+    21300008: Changfu_Crest_1_3
+    21300010: Changfu_Crest_1_4
+    21300012: Changfu_Eye_2
+    21300014: Changfu_Eye_3
+    21300016: Changfu_Peak_2
+    21300018: Changfu_Crest_2_1
+    21300020: Changfu_Crest_2_2
+    21300022: Changfu_Peak_3
+    21300024: Changfu_Crest_3_1
+    21300026: Changfu_Crest_3_2
+    21300028: Changfu_Neck_1_3
+    21300030: Changfu_Neck_1_2
+    21300032: Changfu_Neck_1_1
+    21300034: Changfu_Neck_2_3
+    21300036: Changfu_Neck_2_2
+    21300038: Changfu_Neck_2_1
+    21300040: Changfu_Neck_3_3
+    21300042: Changfu_Neck_3_2
+    21300044: Changfu_Neck_3_1
+    21300046: Changfu_Body_1
+    21300048: Changfu_Body_2
+    21300050: Changfu_Chest_1
+    21300052: Changfu_Chest_2
+    21300054: Changfu_Chest_3
+    21300056: Changfu_Chest_4
+    21300058: Changfu_Chest_5
+    21300060: Changfu_Tail_1
+    21300062: Changfu_Tail_2
+    21300064: Changfu_Tail_3
+    21300066: Changfu_Tail_4
+    21300068: Changfu_LegF_1
+    21300070: Changfu_LegF_2
+    21300072: Changfu_LegF_3
+    21300074: Changfu_ToeF_1
+    21300076: Changfu_ToeF_2
+    21300078: Changfu_ToeF_3
+    21300080: Changfu_ToeF_4
+    21300082: Changfu_Wing_1
+    21300084: Changfu_Wing_2
+    21300086: Changfu_LegB_1
+    21300088: Changfu_LegB_2
+    21300090: Changfu_LegB_3
+    21300092: Changfu_ToeB_1
+    21300094: Changfu_ToeB_2
+    21300096: Changfu_ToeB_3
+    21300098: Changfu_ToeB_4
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Changfu_Eye_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 889
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1f600cc85ba0a46aa28847c7660462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Peak_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 822
+        width: 51
+        height: 40
+      alignment: 9
+      pivot: {x: 0.8898378, y: 0.8514633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48d601fdf64e59488cd52daf32c8cbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Crest_1_1
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 911
+        width: 150
+        height: 57
+      alignment: 9
+      pivot: {x: 0.021221211, y: 0.35567862}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beefcc7e1c53b8f4d97dcc01f07db0ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Crest_1_2
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 755
+        width: 119
+        height: 114
+      alignment: 9
+      pivot: {x: 0.04503766, y: 0.8663646}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2e7770432cd7a4b86b38343d0a5969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Crest_1_3
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 856
+        width: 64
+        height: 101
+      alignment: 9
+      pivot: {x: 0.08679867, y: 0.952592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070247ee83fc469408399452bdabcb0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Crest_1_4
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 743
+        width: 35
+        height: 101
+      alignment: 9
+      pivot: {x: 0.27332938, y: 0.96007335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60acd4f3867e93c43a86c695c6b75fd3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Eye_2
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 922
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedd55491bc68e745aa25f0084fd8c7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Eye_3
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 921
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a43494bf72e01749b448fbc42d7afce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Peak_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 851
+        width: 31
+        height: 29
+      alignment: 9
+      pivot: {x: 0.15680128, y: 0.8237052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2ccb61fad3d3c4b92e29f2088d7385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Crest_2_1
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 877
+        width: 41
+        height: 69
+      alignment: 9
+      pivot: {x: 0.94751275, y: 0.98824054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb1ea2c4914b5541abde2ae04df79a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Crest_2_2
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 775
+        width: 36
+        height: 65
+      alignment: 9
+      pivot: {x: 0.9277259, y: 0.99218845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0eb5a4de2368e488abd692ce7a8bea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Peak_3
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 927
+        width: 26
+        height: 25
+      alignment: 9
+      pivot: {x: 0.12925369, y: 0.8841626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dce9308261bbb4997aa461ab62608d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Crest_3_1
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 837
+        width: 17
+        height: 50
+      alignment: 9
+      pivot: {x: 0.9148488, y: 0.96674436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df8ef779b874cc4ead469b1ee499f66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Crest_3_2
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 786
+        width: 29
+        height: 46
+      alignment: 9
+      pivot: {x: 0.9344019, y: 0.9818898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cb390940adf15478ab123b4cc4e3d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_1_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 495
+        width: 38
+        height: 273
+      alignment: 9
+      pivot: {x: 0.5589632, y: 0.036286183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6ff0de1a3732144bd8b19cf0958521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_1_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 251
+        width: 72
+        height: 197
+      alignment: 9
+      pivot: {x: 0.68522865, y: 0.07124677}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79eba1a8db787144b878f71ffa276b4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_1_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 17
+        width: 113
+        height: 186
+      alignment: 9
+      pivot: {x: 0.83888745, y: 0.11630891}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7817c0f51724f24a8661de121a194b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_2_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 594
+        width: 30
+        height: 109
+      alignment: 9
+      pivot: {x: 0.27287903, y: 0.05921698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6586f62fd648524b8ea84645454d3a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_2_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 423
+        width: 44
+        height: 94
+      alignment: 9
+      pivot: {x: 0.20450383, y: 0.08504827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92426c5fdf36f614ebd3f5e8d0c338a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_2_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 235
+        width: 54
+        height: 127
+      alignment: 9
+      pivot: {x: 0.28162074, y: 0.10923851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49208dcc9740d554e8a3d3d7342bada5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_3_3
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 634
+        width: 32
+        height: 60
+      alignment: 9
+      pivot: {x: 0.14762592, y: 0.08015035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2a13985df095343a025a7036423728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_3_2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 459
+        width: 73
+        height: 102
+      alignment: 9
+      pivot: {x: 0.10186601, y: 0.064820535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee884201f9192ff4b95c4b3c0a6638fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Neck_3_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 312
+        width: 23
+        height: 57
+      alignment: 9
+      pivot: {x: 0.517667, y: 0.13556015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e305af09c685649b1a6721d28db585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Body_1
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 25
+        width: 177
+        height: 143
+      alignment: 9
+      pivot: {x: 0.14935751, y: 0.26749372}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db35b0476ea21af4a8379be4f8e03de9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Body_2
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 9
+        width: 139
+        height: 133
+      alignment: 9
+      pivot: {x: 0.20447129, y: 0.2594449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73148c0f127bc34fafa8e54740d8b83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Chest_1
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 628
+        width: 93
+        height: 81
+      alignment: 9
+      pivot: {x: 0.9712813, y: 0.862044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2977e230cca75024e9dd786f64681786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Chest_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 441
+        width: 85
+        height: 135
+      alignment: 9
+      pivot: {x: 0.94891214, y: 0.98302364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7df865e611a3404799ba201801a950b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Chest_3
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 272
+        width: 59
+        height: 117
+      alignment: 9
+      pivot: {x: 0.93951315, y: 0.96758014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d1e28d96625e548a9ef210db7cc7c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Chest_4
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 146
+        width: 75
+        height: 103
+      alignment: 9
+      pivot: {x: 0.44080648, y: 0.9741172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f413e59b3460343a2cdda04d987ec0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Chest_5
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 29
+        width: 48
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3602155, y: 0.95789975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2440907ad72e52949b76e8eca587dcda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Tail_1
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 616
+        width: 248
+        height: 121
+      alignment: 9
+      pivot: {x: 0.010407724, y: 0.17408891}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d0bb1c2ec80414ea508de75a84e65a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Tail_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 477
+        width: 149
+        height: 118
+      alignment: 9
+      pivot: {x: 0.013989749, y: 0.8447695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2695a5e64fe39074db6e503e9c7f44fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Tail_3
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 266
+        width: 175
+        height: 170
+      alignment: 9
+      pivot: {x: 0.02056501, y: 0.72723997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4dd05fbd32c7c4b963263d8b2fd74c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Tail_4
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 146
+        width: 130
+        height: 107
+      alignment: 9
+      pivot: {x: 0.022844989, y: 0.73715836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363cc3ca42b585d408c39da8d2896702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_LegF_1
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 585
+        width: 21
+        height: 124
+      alignment: 9
+      pivot: {x: 0.37146288, y: 0.9563114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940b8bc4bf8e41c41bceb1cde6752797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_LegF_2
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 401
+        width: 18
+        height: 116
+      alignment: 9
+      pivot: {x: 0.39483303, y: 0.95692915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2c5af48a96ea44daa4e2f476e40e1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_LegF_3
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 296
+        width: 30
+        height: 29
+      alignment: 9
+      pivot: {x: 0.82394004, y: 0.8131861}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17da7641972c64f4ca2b1e58c82dcb07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_ToeF_1
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 224
+        width: 27
+        height: 21
+      alignment: 9
+      pivot: {x: 0.09223768, y: 0.87659055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6c49e13aeafe94dba8058ad63c3310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_ToeF_2
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 163
+        width: 42
+        height: 28
+      alignment: 9
+      pivot: {x: 0.9625971, y: 0.9020195}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d707b57ccbcef764aa933833ed642557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_ToeF_3
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 116
+        width: 47
+        height: 25
+      alignment: 9
+      pivot: {x: 0.96670336, y: 0.65580076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863f93db11e65ed44a39635b551e0aa3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_ToeF_4
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 58
+        width: 46
+        height: 30
+      alignment: 9
+      pivot: {x: 0.96798974, y: 0.94888383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cb0f2593a511040bd56bf9a62736fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Wing_1
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 888
+        width: 119
+        height: 73
+      alignment: 9
+      pivot: {x: 0.035479378, y: 0.9162765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a05e75e97c0d4e4ab973a5e489547a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_Wing_2
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 778
+        width: 106
+        height: 62
+      alignment: 9
+      pivot: {x: 0.04748132, y: 0.8904449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374920bfeb1280a4995897277b48b434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_LegB_1
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 482
+        width: 21
+        height: 124
+      alignment: 9
+      pivot: {x: 0.36885, y: 0.96129435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9701975967ab74fa94709214bebed3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_LegB_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 312
+        width: 18
+        height: 116
+      alignment: 9
+      pivot: {x: 0.39534506, y: 0.94862944}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f508a8780a22eb4e87311b5654ff33d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_LegB_3
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 233
+        width: 30
+        height: 29
+      alignment: 9
+      pivot: {x: 0.84781903, y: 0.8676358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f996f62da912c48a3cd5d4e7a4f78c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_ToeB_1
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 163
+        width: 27
+        height: 21
+      alignment: 9
+      pivot: {x: 0.084395796, y: 0.9007612}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb72035540931584b89ee8931b12c569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_ToeB_2
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 114
+        width: 39
+        height: 28
+      alignment: 9
+      pivot: {x: 0.948743, y: 0.89502335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbd9ca2e8c3ab743b8e240b92cdd119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_ToeB_3
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 66
+        width: 48
+        height: 25
+      alignment: 9
+      pivot: {x: 0.92610294, y: 0.6422806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf5fcebe2ef01b4f822820d5a70442e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Changfu_ToeB_4
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 16
+        width: 46
+        height: 30
+      alignment: 9
+      pivot: {x: 0.9606323, y: 0.9359207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f634144fce79340b32aa108602d771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ab63475c8f0873d42a79139abf1b6de2
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

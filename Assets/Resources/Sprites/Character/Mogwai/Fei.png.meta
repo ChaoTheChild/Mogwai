@@ -1,0 +1,734 @@
+fileFormatVersion: 2
+guid: 2f4e562af8b0fba41a3081a48fe81c46
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Fei_0
+    21300002: Fei_2
+    21300004: Fei_3
+    21300006: Fei_4
+    21300008: Fei_5
+    21300010: Fei_6
+    21300012: Fei_7
+    21300014: Fei_8
+    21300016: Fei_9
+    21300018: Fei_11
+    21300020: Fei_17
+    21300022: Fei_23
+    21300024: Fei_24
+    21300026: Fei_25
+    21300028: Fei_26
+    21300030: Fei_27
+    21300032: Fei_30
+    21300034: Fei_34
+    21300036: Fei_35
+    21300038: Fei_36
+    21300040: Fei_38
+    21300042: Fei_39
+    21300044: Fei_41
+    21300046: Fei_47
+    21300048: Fei_49
+    21300050: Fei_51
+    21300052: Fei_54
+    21300054: Fei_55
+    21300056: Fei_56
+    21300058: Fei_57
+    21300060: Fei_58
+    21300062: Fei_59
+    21300064: Fei_61
+    21300066: Fei_64
+    21300068: Fei_1
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fei_2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 856
+        width: 114
+        height: 139
+      alignment: 9
+      pivot: {x: 0.9090073, y: 0.15865628}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d967ff6d8e56a94b84d6f174c6cae42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_3
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 864
+        width: 82
+        height: 137
+      alignment: 9
+      pivot: {x: 0.56147283, y: 0.12877794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2324c6e9efeddc4f9e8b2824e535f71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 895
+        width: 64
+        height: 88
+      alignment: 9
+      pivot: {x: 0.7492211, y: 0.92639786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ecc698bd3c2ee4eb42d1701fc47f7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 892
+        width: 45
+        height: 84
+      alignment: 9
+      pivot: {x: 0.8150645, y: 0.8861193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149054444a5ae71419d3839a295e3438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_6
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 938
+        width: 62
+        height: 35
+      alignment: 9
+      pivot: {x: 0.8789065, y: 0.23160227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72bee2e0ae2b3b43bc215c4192dd1a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_7
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 900
+        width: 25
+        height: 79
+      alignment: 9
+      pivot: {x: 0.44692016, y: 0.123772345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9feec9948121be44847c828ac541ff4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_8
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 908
+        width: 74
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad864402f18c37449de27c536f3ff54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_11
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 919
+        width: 43
+        height: 43
+      alignment: 9
+      pivot: {x: 0.65090305, y: 0.6743831}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25ab7fa72cbc0345aaa3d4aecae4580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_17
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 854
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5b6305184032740b671c9a5edace83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_23
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 817
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb77cc1789018104d8cf141eecdf83f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_24
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 564
+        width: 222
+        height: 225
+      alignment: 9
+      pivot: {x: 0.8005043, y: 0.48318142}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1664033bc5c364c82f79e5e4ff9345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_25
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 568
+        width: 193
+        height: 216
+      alignment: 9
+      pivot: {x: 0.8136529, y: 0.30885202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f0abad69f911d4ea5cb1e452d2a5c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_26
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 562
+        width: 193
+        height: 218
+      alignment: 9
+      pivot: {x: 0.7106298, y: 0.17380461}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462eb4841d619ca4095fc0196fd47cb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_27
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 542
+        width: 160
+        height: 275
+      alignment: 9
+      pivot: {x: 0.49999923, y: 0.47024104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3958b9969fa5a3b4b8b54bd19a00d87a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_30
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 258
+        width: 110
+        height: 226
+      alignment: 9
+      pivot: {x: 0.5443433, y: 0.5036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51676992576bbaa45b90b8b2e44cfd04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_34
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 455
+        width: 27
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b645ec0203323c4438b013481317acf3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_35
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 363
+        width: 108
+        height: 73
+      alignment: 9
+      pivot: {x: 0.48833156, y: 0.8199839}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944e3402799a81249af9b82ba3f9325b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_36
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 335
+        width: 84
+        height: 117
+      alignment: 9
+      pivot: {x: 0.39527458, y: 0.4970038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f4b831e225e2e4ca4c0f8590122cc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_38
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 363
+        width: 88
+        height: 68
+      alignment: 9
+      pivot: {x: 0.15000223, y: 0.78771746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b3708d4e2a3aa43925599eebeed5b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_39
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 358
+        width: 107
+        height: 96
+      alignment: 9
+      pivot: {x: 0.26357546, y: 0.69967526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12d616308394794381206563002c5fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_51
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 75
+        width: 28
+        height: 24
+      alignment: 9
+      pivot: {x: 0.7667926, y: 0.46688843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418ad313693b6f74fad566b8fb568241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_54
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 73
+        width: 55
+        height: 71
+      alignment: 9
+      pivot: {x: 0.7596591, y: 0.17019965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0846c101c085c3478a92823c0b3832b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_55
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 67
+        width: 32
+        height: 65
+      alignment: 9
+      pivot: {x: 0.22195339, y: 0.8998839}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f673c0daeaacc584bb5b69c8a1cb8f8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_56
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 82
+        width: 25
+        height: 25
+      alignment: 9
+      pivot: {x: 0.8707312, y: 0.5172065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb3b04ea94a2ce41a1cd33b374a6699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_57
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 70
+        width: 26
+        height: 54
+      alignment: 9
+      pivot: {x: 0.41087928, y: 0.7938151}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef948395ff170f44d9bacf90a90825ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_58
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 88
+        width: 38
+        height: 32
+      alignment: 9
+      pivot: {x: 0.815041, y: 0.40428257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5a6d1e5eb3d0e4da7f10cdb1a38f94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_59
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 77
+        width: 28
+        height: 38
+      alignment: 9
+      pivot: {x: 0.3620758, y: 0.8384175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caeb6eb4850d57a4e8907ca73cc9b156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_61
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 46
+        width: 4
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a653069f985625b48a27a17be9a6b4fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_64
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 35
+        width: 5
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fb58fe845b93f41b80ecf2e61c2505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fei_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 64
+        width: 30
+        height: 74
+      alignment: 9
+      pivot: {x: 0.33887836, y: 0.8889494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9445fc442c06a374b8dae9e0a3f9bca9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c5d5b159dc3971e4eae66d774f107573
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

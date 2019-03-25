@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: JadeGrass
   m_EditorClassIdentifier: 
   health: 20
-  dropItems: []
+  dropItems:
+  - {fileID: 11400000, guid: 7095ebbd90d06d94d8ab102e65d46196, type: 2}
   dropped: {fileID: 1008016146726294791, guid: 24e6fc02687de554d846bca3accdcdcd, type: 3}
   bornChance: 0.08
   bornNum: 0

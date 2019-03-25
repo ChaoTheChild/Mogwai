@@ -21,46 +21,68 @@ public class Monster : Character
     [SerializeField]    Mogwai mogwai;
     public enemyStat curStat = enemyStat.IDLE;
     Vector3 bornLocation;
-    SpriteRenderer  spriteRenderer;
+    public List<SpriteRenderer>  spriteRds;
     IdleDir idleDir;
 
     public int chaseDistance = 30;
     public int damageDistance = 5;
+
+    public int baseDamage = 2;
+
+     float attackCd;
+     float chaseCd;
+
+    bool canAttack = true;
+    bool canChase = true;
+
+    Animator monsterAnimator;
     // Start is called before the first frame update
     void Awake(){
         //Debug.Log("Monster start");
-        StartCoroutine ("SetUp");
-       
-     
+        StartCoroutine ("SetUp");    
+
     }
 
     IEnumerator SetUp(){
         //Debug.Log("Monster Set up");
-         bornLocation = transform.position;
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-         Debug.Log(spriteRenderer);
+        bornLocation = transform.position;
+        spriteRds = new List<SpriteRenderer>();
+        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+        foreach(SpriteRenderer s in renderers){
+            spriteRds.Add(s);
+        }
 
         idleDir = IdleDir.LEFT;
+
+        chaseDistance = mogwai.detectDis;
+        damageDistance = mogwai.damageDis;
+        baseDamage = mogwai.baseDmg;
+        speed = mogwai.idleSpeed;
+        attackCd = mogwai.attackCd;
+        chaseCd = mogwai.chaseCd;
+        
+        monsterAnimator = GetComponentInChildren<Animator>();
+
         yield return StartCoroutine("FollowSetUp");
     }
 
     IEnumerator FollowSetUp(){
+            RotateSprite();
            UpdateSprite();
            yield return null;
 
-
     }
     void OnEnable(){
-        Debug.Log("enabledd");
+       // Debug.Log("enabledd");
         UpdateSprite();
 
         
     }
     void Disabled(){
-        Debug.Log("disabled");
+       // Debug.Log("disabled");
     }
-    void Update(){
-        Debug.Log(curStat);
+    void FixedUpdate(){
+//        Debug.Log(curStat);
         React();
         FindPlayer();
         UpdateSprite();
@@ -71,10 +93,12 @@ public class Monster : Character
         switch(curStat){
             case enemyStat.IDLE:
             Idle();
+
             break;
 
             case enemyStat.CHASE:
-            ChasePalayer();
+            Chase();
+
             break;
 
             case enemyStat.ATTACK:
@@ -86,20 +110,30 @@ public class Monster : Character
 
 
     void FindPlayer(){
+
+        if(GameObject.Find("Player")){
         Vector3 playerPosition =  GameObject.Find("Player").transform.position;
         float distance = Vector3.Distance(transform.position, playerPosition);
         if(distance < damageDistance){
+                     
             curStat = enemyStat.ATTACK;
         }else if(distance < chaseDistance){
+    
+                curStat = enemyStat.CHASE;
+            
             curStat = enemyStat.CHASE;
         }else{
             curStat = enemyStat.IDLE;
         }
+        }
+      
     }
 
     void Idle(){
         //HARD CODE NOW
          Move();
+        monsterAnimator.SetInteger("Stat",0);
+
         speedMultiplier = Random.Range(0.5f,1.2f);
         if(idleDir == IdleDir.RIGHT){
              if(transform.position.x < bornLocation.x+Random.Range(4,10)){
@@ -131,29 +165,64 @@ public class Monster : Character
     }
 
 
-    void ChasePalayer(){
-       // Debug.Log("Chase");
-         Vector3 target = GameObject.Find("Player").transform.position;
-         speedMultiplier = Random.Range(1.5f,2.0f);
-         dir = target - transform.position;
-         Move();         
+
+    void Chase(){
+        if(canChase == true){
+            canChase = false;
+            StartCoroutine("ReChase");
+            if(GameObject.Find("Player")){
+           Vector3 target = GameObject.Find("Player").transform.position;
+        monsterAnimator.SetInteger("Stat",1);
+        speedMultiplier = mogwai.chaseSpeed/speed;
+        dir = target - transform.position;
+        Move();
+       }
+        }
     }
 
 
     void Attack(){
-            GameObject player = GameObject.Find("Player");
-            Debug.Log("Attack"+ player);
-    }
+        if(canAttack == true){
+            canAttack = false;
+            StartCoroutine("ReAttack");
+            if(GameObject.Find("Player")){
+            Player player = GameObject.Find("Player").GetComponent<Player>();
+            monsterAnimator.SetInteger("Stat",2);
+            player.TakeDamage(baseDamage);
 
-
-
-    void UpdateSprite(){
-//        Debug.Log(spriteRenderer);
-        if(idleDir == IdleDir.LEFT){
-            spriteRenderer.flipX = false;
-        }else if(idleDir == IdleDir.RIGHT){
-            spriteRenderer.flipX = true;
+            }
         }
-        spriteRenderer.sortingOrder = 1000 - Mathf.RoundToInt(this.transform.position.z/2);
+    
+
     }
+
+    IEnumerator ReChase(){
+        yield return new WaitForSeconds(chaseCd);
+       // monsterAnimator.SetInteger("Stat",0);
+        canChase = true;
+    }
+    IEnumerator ReAttack(){
+        yield return new WaitForSeconds(attackCd);
+         monsterAnimator.SetInteger("Stat",0);
+
+        canAttack = true;
+    }
+
+    
+    public virtual void RotateSprite(){
+                Transform spritesParent = transform.Find("MogwaiSprite");
+                spritesParent.Rotate(new Vector3(45,0,0));
+    }
+
+    public virtual void UpdateSprite(){
+//        Debug.Log(spriteRenderer);
+
+        if(idleDir == IdleDir.LEFT){
+            this.transform.localScale = new Vector3(-1,1,1);
+        }else if(idleDir == IdleDir.RIGHT){
+            this.transform.localScale = new Vector3(1,1,1);
+            }         
+    
+    }
+
 }

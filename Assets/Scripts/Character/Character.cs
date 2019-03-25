@@ -26,7 +26,8 @@ public abstract class Character : MonoBehaviour
     protected void Move(){
         //Debug.Log(dir);
         if(dir != Vector3.zero){
-            transform.Translate(dir/dir.magnitude * speed * speedMultiplier*Time.deltaTime);
+            Vector3 moveVector = dir/dir.magnitude * speed * speedMultiplier*Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, transform.position+moveVector,1f);
         }else{
             rd.velocity = Vector3.Lerp(rd.velocity,Vector3.zero,2f);
         }
@@ -36,10 +37,15 @@ public abstract class Character : MonoBehaviour
             Destroy(gameObject);
     }
 
-     public void TakeDamage(int damage){
+     public virtual void TakeDamage(int damage){
          //Instantiate(bloodEffect,transform.position,Quaternion.identity);
-         health -= damage;
-         Debug.Log("Damage Taken");
+         if(health > 0){
+             health -= damage;
+         } else{
+             Die();
+         }
+         
+        // Debug.Log("Damage Taken");
      }
     
 }

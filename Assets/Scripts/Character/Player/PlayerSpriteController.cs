@@ -10,7 +10,7 @@ public class PlayerSpriteController : MonoBehaviour
     Dictionary<string, List<Sprite>> playerSprites; 
 
     Dictionary<string,int> spritIndex;
-    public int WeaponIndex = 0;
+    public int WeaponIndex = 10;
     
     void Start(){
                 LoadSprites();

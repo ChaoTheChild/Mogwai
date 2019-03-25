@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class Player : Character
 {   
@@ -17,9 +18,14 @@ public class Player : Character
     bool isWeaponEquipped = false;
     string curScene;
     private Interactable currentInteractable;
+    private Monster currentMonster;
 
      public delegate void OnPlayerChange();
     public static event OnPlayerChange OnPlayerMove;
+    PlayerSpriteController sc;
+
+    [SerializeField]
+    TextMeshProUGUI healthText;
 
  
     void Awake(){
@@ -33,11 +39,15 @@ public class Player : Character
     }
 
     void Start(){
+        sc= gameObject.GetComponent<PlayerSpriteController>();
+
         maincamera = FindObjectOfType<Camera>();
         playerAnimator = GetComponent<Animator>();
         curScene = SceneManagement.GetCurrentSceneName();
         weaponDictionary = ResourceManagement.SetUpWeaponDictionay("ScriptableObjects/Items/Equipable/Weapon");
-        CheckIfEquippedWeapon();
+       // CheckIfEquippedWeapon();
+
+       
             
         switch(curScene){
             case "CharacterCustomization":
@@ -52,15 +62,19 @@ public class Player : Character
             break;
         } 
 
+       
+
     
     }
 
     private void PlayerBorn()
     {     
-        this.health = 32;
+        this.health = 100;
         this.damage = 2;
         this.speed = 10;
-        maincamera = GameObject.Find("Camera").GetComponent<Camera>();
+        maincamera =  GameObject.Find("CameraController").GetComponent<Camera>();
+        FollowObject followObject = GameObject.Find("Camera").GetComponent<FollowObject>();
+        followObject.FindCameraTarget();
         transform.position = new Vector3(100f,0f,100f);
         transform.Find("Root").transform.Rotate(new Vector3(45f,0,0));
         input = GameObject.Find("GameManager").GetComponent<InputController>();
@@ -68,6 +82,9 @@ public class Player : Character
 
         //Debug.Log("root rotation:"+transform.Find("Root").transform.rotation);
         rd = GetComponent<Rigidbody>();
+        healthText =  GameObject.Find("PlayerHealthText").GetComponent<TextMeshProUGUI>();
+//        Debug.Log(healthText.name);
+         healthText.text = health.ToString();
         
     }
 
@@ -99,17 +116,23 @@ public class Player : Character
    }
 
   void Interact(){
+      CheckIfEquippedWeapon();
       if(!EventSystem.current.IsPointerOverGameObject()){
             Ray ray = maincamera.ScreenPointToRay(Input.mousePosition);
           RaycastHit hit;
           if(Physics.Raycast(ray, out hit)){
               //if hit interactable
               //Debug.Log("Hit Collider");
-              currentInteractable = hit.collider.GetComponent<Interactable>();
-              if(currentInteractable != null){
 
+              if(hit.collider.GetComponent<Interactable>() != null){
+                  currentInteractable = hit.collider.GetComponent<Interactable>(); 
                   currentInteractable.Onclicked(this.transform, equippedWeapon);
                     playerAnimator.SetInteger("PlayerStat",2);
+
+              }else if(hit.collider.GetComponent<Monster>() != null){
+                     currentMonster = hit.collider.GetComponent<Monster>();
+                     currentMonster.TakeDamage(equippedWeapon.attackDamageOnCreature);
+                    playerAnimator.SetInteger("PlayerStat",2); 
 
               }
           }
@@ -119,8 +142,8 @@ public class Player : Character
   }
 
   void  CheckIfEquippedWeapon(){
-      PlayerSpriteController sc= gameObject.GetComponent<PlayerSpriteController>();
-      if(sc.sprd[sc.WeaponIndex]!=null){
+      if(sc){
+          if(sc.sprd[sc.WeaponIndex]!=null){
           if(sc.sprd[sc.WeaponIndex].sprite != null){
                  isWeaponEquipped = true;
                  //Debug.Log("weapon equipped");
@@ -143,8 +166,17 @@ public class Player : Character
           Debug.LogError("Weapon object doesn't exist in player");
           return;
       }
+      }
+      
   }
 
+  public override void TakeDamage(int damage){
+//      Debug.Log("Player Take Damage");
+      base.TakeDamage(damage);
+        healthText.text = health.ToString();
+  }
+
+ 
 
  
 }

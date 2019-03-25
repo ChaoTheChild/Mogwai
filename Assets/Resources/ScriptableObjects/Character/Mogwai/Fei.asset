@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65f5d3af95a7054e809c9b349fd37c5, type: 3}
   m_Name: Fei
   m_EditorClassIdentifier: 
-  baseDmg: 7
+  baseDmg: 1
   likedItems: []
   hatedItems: []
   producedItems: []
   relationshipWithPlayer: 0
-  spawnBiome: {fileID: 11400000, guid: 9b32bdf37dfbdc74cbc32f40010d9319, type: 2}
   spawnChance: 0
-  spawnNum: 2
-  detectDis: 10
-  idleSpeed: 0
-  chaseSpeed: 0
+  spawnNum: 1
+  detectDis: 26
+  damageDis: 10
+  idleSpeed: 2
+  chaseSpeed: 60
+  attackCd: 2
+  chaseCd: 0.4

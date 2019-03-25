@@ -8,7 +8,7 @@ public class PlayerAroundTrigger : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         if(col.tag == "Player"){
-            Debug.Log("enable the monster");
+           // Debug.Log("enable the monster");
             transform.parent.GetComponent<Monster>().enabled = true;
 
         }
@@ -16,7 +16,7 @@ public class PlayerAroundTrigger : MonoBehaviour
 
     void OnTriggerExit(Collider col){
          if(col.tag == "Player"){
-             Debug.Log("Disable the monster");
+             //Debug.Log("Disable the monster");
             transform.parent.GetComponent<Monster>().enabled = false;
         }
     }

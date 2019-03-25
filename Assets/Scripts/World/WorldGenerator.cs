@@ -12,10 +12,19 @@ public class WorldGenerator : MonoBehaviour
     int unitY = 60;
     int numBiomeType = 6;
     int numBiome = 18;
-            public MonsterController monsterController;
+    public MonsterController monsterController;
 
+    [SerializeField]
+    GameObject playerPrefab;
+    GameObject mainCamera;
     
     // Start is called before the first frame update
+    void Start(){
+        playerPrefab = Resources.Load<GameObject>("Prefabs/Character/Player/Player");
+       // Debug.Log(playerPrefab);
+
+
+    }
     public void GenerateWorld()
     {   
         
@@ -39,6 +48,7 @@ public class WorldGenerator : MonoBehaviour
         yield return StartCoroutine("RenderMap");
         yield return StartCoroutine("RenderTrees");
         yield return StartCoroutine("RenderMogwai");
+        yield return StartCoroutine("PlayerBorn");
       //  yield return StartCoroutine("FinishWorldBuild");
     }
     
@@ -56,21 +66,20 @@ public class WorldGenerator : MonoBehaviour
     }
 
     IEnumerator SetBiomes(){
-         Debug.Log("Setting Biomes");
 
         world.SetBiomes();
         yield return null;
     }
 
     IEnumerator RenderMap(){
-        Debug.Log("Rendering Map");
+       // Debug.Log("Rendering Map");
 
         world.RenderMap();
         yield return null;
     }
 
     IEnumerator RenderTrees(){
-         Debug.Log("Rendering Trees");
+         //Debug.Log("Rendering Trees");
 
         world.RenderTrees();
         yield return null;
@@ -85,6 +94,11 @@ public class WorldGenerator : MonoBehaviour
     IEnumerator FinishWorldBuild(){
 
         world.FinishUp();
+        yield return null;
+    }
+    IEnumerator PlayerBorn(){
+        GameObject player = Instantiate(playerPrefab);
+        player.name = "Player";
         yield return null;
     }
   

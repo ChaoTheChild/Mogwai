@@ -89,11 +89,12 @@ public class World: MonoBehaviour
                 if(j*numBiome/numBiomeType>=i & i<(j+1)*numBiome/numBiomeType){
 
                     biomes[i] = stereopTypeBiome[j];
-                    //biomes[i].Type = (TileType)j;
-                    //Debug.Log("biome["+i+"] type is" + (TileType)j );
-                    break;
+                 break;
+                }else{
+                    biomes [i] = stereopTypeBiome[0];
                 }
             }
+            
         }
         DefineBiomeForEachUnit();
   
@@ -360,6 +361,17 @@ public class World: MonoBehaviour
     unit_gos[x,y].transform.position += new Vector3(0,units[x,y].ID *0.01f,0);
     }
 
+    public void RenderEdge(){
+        //Left
+        for(int x = -4; x< 0 ; x++){
+            for(int y = -4; y < unitY + 4; y++){
+                
+            }
+        }
+    }
+
+  
+
 #endregion
 
 
@@ -367,13 +379,14 @@ public class World: MonoBehaviour
 public void RenderTrees(){
     GameObject tree_parent = new GameObject();
     tree_parent.name = "Trees"; 
+    
     for(int i=0; i<numBiome; i++){
+     
         for(int j = 0; j< biomes[i].trees.Count; j++){
         float bornChance = biomes[i].trees[j].bornChance;
         int bornNum = 0;
         if(bornChance != 0){
              bornNum = Mathf.RoundToInt(biomeGos[i].transform.childCount*bornChance);
-
         }else {
              bornNum =  biomes[i].trees[j].bornNum;
         }
@@ -381,6 +394,7 @@ public void RenderTrees(){
        
        GameObject parent_go = new GameObject();
        parent_go.name =  biomes[i].trees[j].name + "_parent";
+    
        int totalUnit = biomes[i].units.Count; 
         List<int> randUnit = new List<int>(); 
         for(int w = 0; w<bornNum; w ++){   

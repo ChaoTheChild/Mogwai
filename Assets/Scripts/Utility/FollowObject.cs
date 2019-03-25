@@ -10,10 +10,23 @@ public class FollowObject : MonoBehaviour
     public float speed = 0.2f;
 
     void Start(){
-        objectToFollow = GameObject.Find("CameraTarget").GetComponent<Transform>();
+        FindCameraTarget();
+
     }
-     void LateUpdate(){      
-       desiredPosition = objectToFollow.position;
+
+   public void FindCameraTarget(){
+        if(GameObject.Find("CameraTarget")){
+             objectToFollow = GameObject.Find("CameraTarget").GetComponent<Transform>();
+
+        }
+    }
+
+
+     void LateUpdate(){ 
+         if(objectToFollow){
+            desiredPosition = objectToFollow.position;
        transform.position = Vector3.Lerp(transform.position,desiredPosition,speed);     
+         }     
+
     }
 }
