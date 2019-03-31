@@ -203,8 +203,6 @@ public class Monster : Character
     }
     IEnumerator ReAttack(){
         yield return new WaitForSeconds(attackCd);
-         monsterAnimator.SetInteger("Stat",0);
-
         canAttack = true;
     }
 

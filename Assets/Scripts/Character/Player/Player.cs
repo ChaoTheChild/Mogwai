@@ -16,6 +16,7 @@ public class Player : Character
 
     InputController input;
     bool isWeaponEquipped = false;
+    bool isAttacing  = false;
     string curScene;
     private Interactable currentInteractable;
     private Monster currentMonster;
@@ -108,7 +109,10 @@ public class Player : Character
            }
            OnPlayerMove();
        }else{
-            playerAnimator.SetInteger("PlayerStat",0);
+           if(isAttacing == false){
+                           playerAnimator.SetInteger("PlayerStat",0);
+
+           }
 
        }
      
@@ -125,20 +129,34 @@ public class Player : Character
               //Debug.Log("Hit Collider");
 
               if(hit.collider.GetComponent<Interactable>() != null){
+                  Debug.Log("hit interactable");
+                                      playerAnimator.SetInteger("PlayerStat",2);
+                                      isAttacing =  true;
+                    StartCoroutine("attackCd");
+
                   currentInteractable = hit.collider.GetComponent<Interactable>(); 
                   currentInteractable.Onclicked(this.transform, equippedWeapon);
-                    playerAnimator.SetInteger("PlayerStat",2);
 
               }else if(hit.collider.GetComponent<Monster>() != null){
+                                      playerAnimator.SetInteger("PlayerStat",2); 
+                                      isAttacing = true;
+                         StartCoroutine("attackCd");
+
+
                      currentMonster = hit.collider.GetComponent<Monster>();
                      currentMonster.TakeDamage(equippedWeapon.attackDamageOnCreature);
-                    playerAnimator.SetInteger("PlayerStat",2); 
 
               }
           }
       
       }
         
+  }
+
+  IEnumerator attackCd(){
+
+      yield return new WaitForSeconds(0.6f);
+      isAttacing = false;
   }
 
   void  CheckIfEquippedWeapon(){
