@@ -20,8 +20,8 @@ MonoBehaviour:
   spawnChance: 0
   spawnNum: 1
   detectDis: 34
-  damageDis: 11
+  damageDis: 8
   idleSpeed: 2
-  chaseSpeed: 80
-  attackCd: 1
+  chaseSpeed: 21
+  attackCd: 2
   chaseCd: 0.6

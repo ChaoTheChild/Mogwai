@@ -16,7 +16,8 @@ public class Player : Character
 
     InputController input;
     bool isWeaponEquipped = false;
-    bool isAttacing  = false;
+    bool isAttacking  = false;
+    bool isTakingDamage = false;
     string curScene;
     private Interactable currentInteractable;
     private Monster currentMonster;
@@ -37,9 +38,6 @@ public class Player : Character
             Destroy(this);
         }
 
-    }
-
-    void Start(){
         sc= gameObject.GetComponent<PlayerSpriteController>();
 
         maincamera = FindObjectOfType<Camera>();
@@ -52,7 +50,7 @@ public class Player : Character
             
         switch(curScene){
             case "CharacterCustomization":
-            transform.position = new Vector3(-5f,-1f,0);
+            transform.position = new Vector3(-5f,-1.5f,0);
             SceneManagement.GameSceneLoad += PlayerBorn;
             break;
             case "GameScene":
@@ -61,22 +59,31 @@ public class Player : Character
             default:
             Debug.LogError("No default scene");
             break;
-        } 
+        }   
 
-       
+    }
 
-    
+    void Start(){
+      
     }
 
     private void PlayerBorn()
     {     
+        
         this.health = 100;
         this.damage = 2;
-        this.speed = 10;
-        maincamera =  GameObject.Find("CameraController").GetComponent<Camera>();
+        this.speed = 16;
+  
+        StartCoroutine("bornCd");
+
+    }
+
+    IEnumerator bornCd(){
+        yield return new WaitForSeconds(0.01f);
+          maincamera =  GameObject.Find("CameraController").GetComponent<Camera>();
         FollowObject followObject = GameObject.Find("Camera").GetComponent<FollowObject>();
         followObject.FindCameraTarget();
-        transform.position = new Vector3(100f,0f,100f);
+        transform.position = new Vector3(360f,0f,360f);
         transform.Find("Root").transform.Rotate(new Vector3(45f,0,0));
         input = GameObject.Find("GameManager").GetComponent<InputController>();
         input.OnLeftClick += Interact; 
@@ -84,9 +91,8 @@ public class Player : Character
         //Debug.Log("root rotation:"+transform.Find("Root").transform.rotation);
         rd = GetComponent<Rigidbody>();
         healthText =  GameObject.Find("PlayerHealthText").GetComponent<TextMeshProUGUI>();
-//        Debug.Log(healthText.name);
+//       Debug.Log(healthText.name);
          healthText.text = health.ToString();
-        
     }
 
 
@@ -98,19 +104,29 @@ public class Player : Character
    void GetInput(){
        float hor = Input.GetAxisRaw("Horizontal");
        float ver = Input.GetAxisRaw("Vertical");
-        dir = new Vector3(hor,0,ver);   
+       if(isTakingDamage == true || isAttacking == true){
+                   dir = new Vector3(0,0,0);   
+
+       }else{
+            dir = new Vector3(hor,0,ver);   
+
+       }
 
        if(hor !=0 || ver!=0){
-           playerAnimator.SetInteger("PlayerStat",1);
+           if(isAttacking == false && isTakingDamage == false){
+                playerAnimator.SetInteger("PlayerStat",1);
            if(hor < 0){
                transform.localScale = new Vector3(-1,1,1);
            }else{
                transform.localScale = new Vector3(1,1,1);
            }
            OnPlayerMove();
+
+           }
+          
        }else{
-           if(isAttacing == false){
-                           playerAnimator.SetInteger("PlayerStat",0);
+           if(isAttacking == false && isTakingDamage == false){
+              playerAnimator.SetInteger("PlayerStat",0);
 
            }
 
@@ -129,9 +145,9 @@ public class Player : Character
               //Debug.Log("Hit Collider");
 
               if(hit.collider.GetComponent<Interactable>() != null){
-                  Debug.Log("hit interactable");
+                  //Debug.Log("hit interactable");
                                       playerAnimator.SetInteger("PlayerStat",2);
-                                      isAttacing =  true;
+                                      isAttacking =  true;
                     StartCoroutine("attackCd");
 
                   currentInteractable = hit.collider.GetComponent<Interactable>(); 
@@ -139,7 +155,7 @@ public class Player : Character
 
               }else if(hit.collider.GetComponent<Monster>() != null){
                                       playerAnimator.SetInteger("PlayerStat",2); 
-                                      isAttacing = true;
+                                      isAttacking = true;
                          StartCoroutine("attackCd");
 
 
@@ -156,7 +172,7 @@ public class Player : Character
   IEnumerator attackCd(){
 
       yield return new WaitForSeconds(0.6f);
-      isAttacing = false;
+      isAttacking = false;
   }
 
   void  CheckIfEquippedWeapon(){
@@ -189,11 +205,19 @@ public class Player : Character
   }
 
   public override void TakeDamage(int damage){
-//      Debug.Log("Player Take Damage");
+      //Debug.Log("Player Take Damage");
       base.TakeDamage(damage);
+      isTakingDamage = true;
+      playerAnimator.SetInteger("PlayerStat",3);
+     dir = new Vector3(0,0,0);   
+         StartCoroutine("TakingDmg");
         healthText.text = health.ToString();
   }
 
+IEnumerator TakingDmg(){
+    yield return new WaitForSeconds(1.0f);
+    isTakingDamage = false;
+}
  
 
  

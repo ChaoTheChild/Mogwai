@@ -22,6 +22,6 @@ MonoBehaviour:
   detectDis: 26
   damageDis: 10
   idleSpeed: 2
-  chaseSpeed: 60
+  chaseSpeed: 15
   attackCd: 2
   chaseCd: 0.4

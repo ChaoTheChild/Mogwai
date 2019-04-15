@@ -15,4 +15,6 @@ MonoBehaviour:
   health: 32
   dropItems:
   - {fileID: 11400000, guid: cc9c15d3e9ce90949a7621b26c40bde5, type: 2}
-  bornChance: 0.05
+  dropped: {fileID: 0}
+  bornChance: 0.02
+  bornNum: 1

@@ -16,5 +16,8 @@ MonoBehaviour:
   Type: 5
   trees:
   - {fileID: 11400000, guid: 04198f70404c88f4e99fee1781fbcdc9, type: 2}
+  - {fileID: 11400000, guid: e16c92d6ec14b4a1e98d16147e076336, type: 2}
+  items:
+  - {fileID: 11400000, guid: 6f126ebdb9e414fe98735977f5a7e6ba, type: 2}
   mogwais:
   - {fileID: 11400000, guid: 011cf35dd7ee46a49ab234d8356aeb8a, type: 2}

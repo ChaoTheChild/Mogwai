@@ -10,13 +10,26 @@ public class ObjectDestroy : Interactable
     float attackingInterval;
     
 
-    public virtual void Start(){
+
+   /* public override void Start(){
+        base.Start();
+   }*/
+    public override void Setup(){
       //Debug.Log(destroyableObject.health);
-       health = destroyableObject.health;
+      if(destroyableObject){
+            health = destroyableObject.health;
+                   destroyableObject.dropped = itemPickupPrefab;
+
+
+      }
+      
+      sprites = new Dictionary<string, List<Sprite>>();
+
        itemPickupPrefab = Resources.Load<GameObject>("Prefabs/Item/ItemPickup");
-       destroyableObject.dropped = itemPickupPrefab;
        attackingInterval = 0;
     }
+
+
      public override void Interact(){
         base.Interact();
         if (attackingInterval < 0.1){
@@ -30,7 +43,7 @@ public class ObjectDestroy : Interactable
     }
 
     public virtual void Attacking(){
-      Debug.Log("Attacked");
+      //Debug.Log("Attacked");
         
     }
 

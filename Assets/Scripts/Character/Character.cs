@@ -12,7 +12,7 @@ public abstract class Character : MonoBehaviour
     public int damage;
     //public GameObject bloodEffect;
 
-    protected Vector3 dir;
+    public Vector3 dir;
     private Animator animator; 
     private Transform spritesTransform;
 
@@ -27,7 +27,7 @@ public abstract class Character : MonoBehaviour
         //Debug.Log(dir);
         if(dir != Vector3.zero){
             Vector3 moveVector = dir/dir.magnitude * speed * speedMultiplier*Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, transform.position+moveVector,1f);
+            transform.position = Vector3.Lerp(transform.position, transform.position+moveVector,Time.deltaTime*speed*speedMultiplier);
         }else{
             rd.velocity = Vector3.Lerp(rd.velocity,Vector3.zero,2f);
         }

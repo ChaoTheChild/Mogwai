@@ -8,8 +8,8 @@ public class WorldGenerator : MonoBehaviour
 
     public World world{get;set;}
 
-    int unitX = 60;
-    int unitY = 60;
+    int unitX = 180;
+    int unitY = 180;
     int numBiomeType = 6;
     int numBiome = 18;
     public MonsterController monsterController;
@@ -22,7 +22,6 @@ public class WorldGenerator : MonoBehaviour
     void Start(){
         playerPrefab = Resources.Load<GameObject>("Prefabs/Character/Player/Player");
        // Debug.Log(playerPrefab);
-
 
     }
     public void GenerateWorld()
@@ -43,13 +42,16 @@ public class WorldGenerator : MonoBehaviour
     IEnumerator BuildWorldSeq(){
   
         yield return StartCoroutine("LoadResources"); 
-        yield return StartCoroutine("CalculateWorld");
+        yield return StartCoroutine("GeneratingWorld");
         yield return StartCoroutine("SetBiomes");
         yield return StartCoroutine("RenderMap");
-        yield return StartCoroutine("RenderTrees");
-        yield return StartCoroutine("RenderMogwai");
+        yield return StartCoroutine("RenderZones");
+        yield return StartCoroutine("RenderStuffs");
         yield return StartCoroutine("PlayerBorn");
-      //  yield return StartCoroutine("FinishWorldBuild");
+
+        yield return StartCoroutine("RenderMogwai");
+        
+        //yield return StartCoroutine("FinishWorldBuild");
     }
     
     IEnumerator LoadResources(){
@@ -58,9 +60,8 @@ public class WorldGenerator : MonoBehaviour
 //        Debug.Log("Loading Resources");
         yield return null;
     }
-    IEnumerator CalculateWorld(){
-        Debug.Log("Generating World");
-
+    IEnumerator GeneratingWorld(){
+        //Debug.Log("Generating World");
         world.GenerateWorld(unitX,unitY,numBiomeType,numBiome);
         yield return null;
     }
@@ -73,21 +74,22 @@ public class WorldGenerator : MonoBehaviour
 
     IEnumerator RenderMap(){
        // Debug.Log("Rendering Map");
-
+        world.DivideWorld();
         world.RenderMap();
+        world.DisableAll();
+
         yield return null;
     }
 
-    IEnumerator RenderTrees(){
+    IEnumerator RenderZones(){
+        world.RenderStartingZone();
+        yield return null;
+    }
+
+    IEnumerator RenderStuffs(){
          //Debug.Log("Rendering Trees");
 
-        world.RenderTrees();
-        yield return null;
-    }
-
-    IEnumerator RenderMogwai(){
-        //Debug.Log("Rendering Mogwai");
-        monsterController.SpawnMogwai();
+        world.RenderStuffs();
         yield return null;
     }
 
@@ -101,5 +103,13 @@ public class WorldGenerator : MonoBehaviour
         player.name = "Player";
         yield return null;
     }
+    
+
+        void RenderMogwai(){
+        //Debug.Log("Rendering Mogwai");
+        monsterController.SpawnMogwai();
+        
+    }
+
   
 }

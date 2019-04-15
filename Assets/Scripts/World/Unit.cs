@@ -10,6 +10,10 @@ public class Unit
         int x;
         int y;
         Tile[] tiles;
+
+        public bool isOccupied = false;
+
+
         
 
         
@@ -48,6 +52,9 @@ public class Unit
             y = value;
         }
     }
+
+    public Tree Tree{get;set;}
+    public Item Item{get;set;}
 
     
 

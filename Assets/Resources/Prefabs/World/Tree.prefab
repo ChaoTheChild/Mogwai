@@ -170,7 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactObject: {fileID: 0}
   destroyableObject: {fileID: 0}
-  itemPickupPrefab: {fileID: 0}
+  itemPickupPrefab: {fileID: 1008016146726294791, guid: 24e6fc02687de554d846bca3accdcdcd,
+    type: 3}
   health: 0
 --- !u!95 &2306208918974300665
 Animator:

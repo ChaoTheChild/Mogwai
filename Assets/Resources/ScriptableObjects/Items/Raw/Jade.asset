@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba24f20be0b892740a26facf6fae32e5, type: 3}
   m_Name: Jade
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: b396abc630c8f284ab4af16faeeab2ec, type: 3}
   stackNum: 10
-  isYin: 0
   dropChance: 0
   bornBiome: {fileID: 0}

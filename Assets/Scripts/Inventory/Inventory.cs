@@ -23,7 +23,8 @@ public class Inventory : MonoBehaviour
     public OnItemChange onItemChangeCallBack;
 
 
-    public int space = 8;
+    [SerializeField]
+    int space = 8;
     public List<Item> items = new List<Item>();
     public InventoryUI inventoryUI;
 
@@ -47,6 +48,25 @@ public class Inventory : MonoBehaviour
 
     }
 
+    public bool ContainsItem(Item item){
+        foreach( Item i in items){
+            if (i==item){
+            return true;
+        }
+    }
+            return false;
+
+    }
+
+    public int CountItem(Item item){
+        int count = 0;
+        for(int i=0; i<inventoryUI.slots.Length; i++){
+            if(inventoryUI.slots[i].item == item){
+                count += inventoryUI.slots[i].stackNum;
+            }
+        }
+        return count;
+    }
 
 
 

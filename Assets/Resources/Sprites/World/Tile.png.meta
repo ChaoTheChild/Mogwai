@@ -160,7 +160,7 @@ TextureImporter:
     21300310: GRASS_B1
     21300312: GRASS_B2
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0

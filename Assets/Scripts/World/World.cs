@@ -15,17 +15,25 @@ public class World: MonoBehaviour
     public int unitY{get;set;}
     
     Dictionary<string, Sprite> tileSprite;
-    Dictionary<string, List<Sprite>> treeSprites;
 
-    Dictionary<string,List<Sprite>> mogwaiSprites;
     Dictionary<string,Tree> treeData;
 
     GameObject worldParent;
-    GameObject[] biomeGos;
+    //GameObject[] biomeGos;
+    GameObject[,] mapZones;
+
+    int zoneDiv=9;
+
+    GameObject mapTrigger;
 
     Dictionary<string, GameObject> worldPrefabDictionary;
+
+    Dictionary<string,GameObject> worldItemDictionary;
     public GameObject[,] unit_gos;
     GameObject[,] nature_gos;
+
+    Vector2Int activeCenter = new Vector2Int(4,4);
+
 
 
     public delegate void OnWorldChange();
@@ -43,7 +51,7 @@ public class World: MonoBehaviour
         biomesCenter = new Vector2[numBiome];
         units = new Unit[unitX,unitY];
         unit_gos = new GameObject[unitX,unitY];
-        biomeGos = new GameObject[numBiome];
+        //biomeGos = new GameObject[numBiome];
         worldParent = new GameObject("worldParent");
 
        
@@ -52,8 +60,8 @@ public class World: MonoBehaviour
     public void LoadResources(){
         //Debug.Log("Loading Resources");
         tileSprite = new Dictionary<string,Sprite>();
-        treeSprites = new Dictionary<string,List<Sprite>>();
-        mogwaiSprites = new Dictionary<string,List<Sprite>>();
+       // treeSprites = new Dictionary<string,List<Sprite>>();
+        //mogwaiSprites = new Dictionary<string,List<Sprite>>();
         
         treeData = new Dictionary<string,Tree>();
 
@@ -63,14 +71,16 @@ public class World: MonoBehaviour
         foreach(Sprite s in tilesprites){
             tileSprite[s.name] = s;
         }
-        treeSprites = ResourceManagement.SetUpSpriteDictionary("Sprites/World/Nature/Trees",treeSprites);
+        //treeSprites = ResourceManagement.SetUpSpriteDictionary("Sprites/World/Nature/Trees",treeSprites);
         //mogwaiSprites = ResourceManagement.SetUpSpriteDictionary("Sprites/Character/Mogwai", mogwaiSprites);
   
         worldPrefabDictionary = ResourceManagement.SetUpPrefabDictionary("Prefabs/World");
+        worldItemDictionary = ResourceManagement.SetUpPrefabDictionary("Prefabs/Item");
 
         treeData = ResourceManagement.SetUpTreeDictionay("ScriptableObjects/World/Nature/Tree");
     
         stereopTypeBiome = Resources.LoadAll<Biome>("ScriptableObjects/World");
+
         //Debug.Log("biomes data loaded" + stereopTypeBiome[2]);
 
     }
@@ -83,8 +93,8 @@ public class World: MonoBehaviour
             int y = Random.Range(0,unitY);
             biomesCenter[i] = new Vector2(x,y);
             biomes[i] = new Biome();
-            biomeGos[i] =  new GameObject();
-            biomeGos[i].name = "Biome_" + i;
+            //biomeGos[i] =  new GameObject();
+            //biomeGos[i].name = "Biome_" + i;
             for(int j = 0; j<numBiomeType; j++){
                 if(j*numBiome/numBiomeType>=i & i<(j+1)*numBiome/numBiomeType){
 
@@ -127,12 +137,44 @@ public class World: MonoBehaviour
         }
     }
 
+
+    public void DivideWorld(){
+    mapTrigger = worldPrefabDictionary["MapTrigger"];
+    mapZones = new GameObject[zoneDiv,zoneDiv];
+   
+    for(int i=0; i<zoneDiv;i++){{
+        for(int j = 0; j<zoneDiv; j++){
+        mapZones[i,j] = new GameObject();
+        mapZones[i,j].name = "mapZone_" + i + "_" + j;
+         GameObject unitsGos = new GameObject();
+         unitsGos.name = "Units";
+        unitsGos.transform.SetParent(mapZones[i,j].transform);
+        GameObject mapTrig = Instantiate(mapTrigger);
+        MapTrigger[] maptriggers = mapTrig.GetComponentsInChildren<MapTrigger>();
+
+        foreach(MapTrigger trigger in maptriggers){
+            trigger.indexX = i;
+            trigger.indexY = j;
+        }
+    
+        mapTrig.transform.SetParent(mapZones[i,j].transform);
+        mapTrig.transform.position += new Vector3(i*unitX*4/zoneDiv,0,j*unitY*4/zoneDiv);
+    
+        }
+    }
+     
+    }
+    
+
+}
+
     public void RenderMap(){
         //Instantiate base TitleUnits
           for ( int x = 0; x < unitX; x++){
             for(int y = 0; y < unitY; y++){
                 unit_gos[x,y] = Instantiate(worldPrefabDictionary["Unit"], new Vector3(x*4, 0, y*4), Quaternion.Euler(90,0,0));
-                unit_gos[x,y].transform.SetParent(biomeGos[units[x,y].ID].transform);
+
+                unit_gos[x,y].transform.SetParent(mapZones[x/20,y/20].transform.Find("Units"));
                 unit_gos[x,y].name = "Unit_" + x+"_"+y;
                 
                 //Set 4 basic tileTypes for the units
@@ -169,9 +211,9 @@ public class World: MonoBehaviour
 
             }
 
-        for(int i =0; i<numBiome; i++){
+        /* for(int i =0; i<numBiome; i++){
             biomeGos[i].transform.SetParent(worldParent.transform);
-        }
+        }*/
 
          for ( int x = 0; x < unitX; x++){
             for(int y = 0; y < unitY; y++){
@@ -183,9 +225,7 @@ public class World: MonoBehaviour
 
     }
 
-
-
-  public void SmoothEdge(int x, int y){
+    public void SmoothEdge(int x, int y){
       //Debug.Log("smooth edge" + x +","+y);
       TileType thisType = units[x,y].Type;
       bool TOP,LEFT,RIGHT,BOTTOM;
@@ -361,63 +401,219 @@ public class World: MonoBehaviour
     unit_gos[x,y].transform.position += new Vector3(0,units[x,y].ID *0.01f,0);
     }
 
-    public void RenderEdge(){
-        //Left
-        for(int x = -4; x< 0 ; x++){
-            for(int y = -4; y < unitY + 4; y++){
-                
+    public void DisableAll(){
+        foreach(GameObject zone in mapZones){
+            zone.SetActive(false);
+        }
+    }
+
+    public void RenderStartingZone(){
+
+        for(int x = activeCenter.x - 1; x< activeCenter.x + 2;x++){
+            for(int y = activeCenter.y - 1; y< activeCenter.y + 2; y++){
+                mapZones[x,y].SetActive(true);
+                if(x != activeCenter.x || y!= activeCenter.y){
+                    Collider[] colliders = mapZones[x,y].GetComponentsInChildren<Collider>();
+                    foreach ( Collider col in colliders){
+                        col.enabled = false;
+                    }
+                }
+
+
             }
         }
     }
 
-  
+    public void RenderGoRight(){
+       Debug.Log("render goes right");
+        StartCoroutine(RefreshTrigger(1,0));
+
+
+    }
+    public void RenderGoLeft(){
+        Debug.Log("render goes left");
+        StartCoroutine(RefreshTrigger(-1,0));
+
+    }
+
+    public void RenderGoUp(){
+        Debug.Log("render goes up");
+        StartCoroutine(RefreshTrigger(0,1));
+
+    }
+
+    public void RenderGoDown(){
+        Debug.Log("render goes down");
+        StartCoroutine(RefreshTrigger(0,-1));
+
+       
+    }
+
+
+    IEnumerator RefreshTrigger(int difX, int difY){
+        yield return StartCoroutine(DisableCenterTrigger());
+        yield return StartCoroutine(RefreshCenter(difX,difY));
+        yield return StartCoroutine(RefreshZones());
+        yield return StartCoroutine(EnableCenterTrigger());
+    }
+        
+
+    IEnumerator DisableCenterTrigger(){
+        Debug.Log("disable center trigger");
+         Collider[] colliders = mapZones[activeCenter.x,activeCenter.y].GetComponentsInChildren<Collider>();
+        foreach(Collider col in colliders){
+            col.enabled = false;
+        }
+        yield return null;
+    }
+
+    IEnumerator RefreshCenter(int difX, int difY){
+        Debug.Log("refresh Center");
+        activeCenter += new Vector2Int(difX,difY);
+        yield return null;
+
+    }
+
+    IEnumerator RefreshZones(){
+        Debug.Log("refresh zones");
+         for(int x = activeCenter.x - 1; x< activeCenter.x + 2;x++){
+              int y = activeCenter.y;
+                mapZones[x,y-2].SetActive(false);
+                mapZones[x,y+2].SetActive(false);
+                }
+
+
+        for(int y = activeCenter.y -1; y< activeCenter.y + 2; y++){
+            int x = activeCenter.x;
+                   mapZones[x-2,y].SetActive(false);
+                   mapZones[x+2,y].SetActive(false);
+             }
+        for(int x = activeCenter.x - 1; x< activeCenter.x + 2;x++){
+            for(int y = activeCenter.y -1; y< activeCenter.y + 2; y++){
+        mapZones[x,y].SetActive(true);
+        Collider[] colliders = mapZones[x,y].GetComponentsInChildren<Collider>();
+        foreach(Collider col in colliders){
+            col.enabled = false;
+        }
+    }
+}        
+
+yield return null;
+
+    }
+    IEnumerator EnableCenterTrigger(){
+        Debug.Log("enable Center trigger");
+
+        Collider[] colliders = mapZones[activeCenter.x,activeCenter.y].GetComponentsInChildren<Collider>();
+        foreach(Collider col in colliders){
+            col.enabled = true;
+        }
+        yield return null;
+
+    }
 
 #endregion
 
 
 //render Tree
-public void RenderTrees(){
+public void RenderStuffs(){
+   
+    for(int i=0; i<zoneDiv; i++){
+        for (int j = 0; j<zoneDiv;j++){
     GameObject tree_parent = new GameObject();
     tree_parent.name = "Trees"; 
-    
-    for(int i=0; i<numBiome; i++){
-     
-        for(int j = 0; j< biomes[i].trees.Count; j++){
-        float bornChance = biomes[i].trees[j].bornChance;
-        int bornNum = 0;
-        if(bornChance != 0){
-             bornNum = Mathf.RoundToInt(biomeGos[i].transform.childCount*bornChance);
-        }else {
-             bornNum =  biomes[i].trees[j].bornNum;
-        }
-       // Debug.Log("gonna generate " + bornNum + biomes[i].destroyables[j]);
-       
-       GameObject parent_go = new GameObject();
-       parent_go.name =  biomes[i].trees[j].name + "_parent";
-    
-       int totalUnit = biomes[i].units.Count; 
-        List<int> randUnit = new List<int>(); 
-        for(int w = 0; w<bornNum; w ++){   
-           int newNum  = Mathf.RoundToInt(Random.Range(0,totalUnit)) ;
-            randUnit.Add(newNum);
-             
-           GameObject tree_go = Instantiate(worldPrefabDictionary["Tree"],Vector3.zero,Quaternion.identity);
-           tree_go.name = biomes[i].trees[j].name;
-           tree_go.transform.SetParent(parent_go.transform);
-           parent_go.transform.SetParent(tree_parent.transform);
-           tree_go.transform.position = new Vector3(biomes[i].units[newNum].X*4,0.9f,biomes[i].units[newNum].Y*4);
-           tree_go.GetComponent<TreeObject>().destroyableObject= treeData[tree_go.name];
-           tree_go.GetComponentInChildren<SpriteRenderer>().sprite = treeSprites[tree_go.name][Random.Range(0,treeSprites[tree_go.name].Count)];
-           tree_go.GetComponentInChildren<SpriteRenderer>().sortingOrder = 1000 - biomes[i].units[newNum].Y*2;
+    GameObject item_parent = new GameObject();
+    item_parent.name = "Items";
+    GameObject mogwaiSpawners = new GameObject();
+    mogwaiSpawners.name = "MogwaiSpawners";
 
-       }
-     
-        
+    tree_parent.transform.SetParent(mapZones[i,j].transform);
+    item_parent.transform.SetParent(mapZones[i,j].transform);
+    mogwaiSpawners.transform.SetParent(mapZones[i,j].transform);
+
+
+
+
+    for(int x = 0; x< unitX/zoneDiv; x++){
+            for(int y=0; y<unitY/zoneDiv; y++){
+                //Debug.Log("check the units");
+                float rand = Random.value;
+                int unitx = unitX*i/zoneDiv + x;
+                int unity = unitY*j/zoneDiv + y;
+                int id = units[unitx,unity].ID;
+
+
+                //Render Tree
+                for(int w = 0; w< biomes[id].trees.Count; w++){
+
+                    float val = Random.value;
+                    if(val < biomes[id].trees[w].bornChance && units[unitx,unity].isOccupied == false){
+
+                        units[unitx,unity].Tree = biomes[id].trees[w];
+                        units[unitx,unity].isOccupied = true;
+
+            GameObject tree_go = Instantiate(worldPrefabDictionary["Tree"],Vector3.zero,Quaternion.identity);
+            tree_go.name = units[unitx,unity].Tree.name;
+           tree_go.transform.SetParent(tree_parent.transform);
+           tree_go.transform.position = new Vector3(unitx*4,0.9f,unity*4);
+
+           TreeObject treeObject = tree_go.GetComponent<TreeObject>();
+         
+            treeObject.destroyableObject = units[unitx,unity].Tree;
+            treeObject.Setup();
+
+            tree_go.GetComponentInChildren<SpriteRenderer>().sprite = treeObject.sprites[tree_go.name][Random.Range(0,treeObject.sprites[tree_go.name].Count)];
+            tree_go.GetComponentInChildren<SpriteRenderer>().sortingOrder = 1000 - units[unitx,unity].Y*2;
+
+                    }
+                }
+                //Render Items
+                if(biomes[id].items.Count > 0){
+                    for(int w = 0; w<biomes[id].items.Count; w++){
+                    float val = Random.value;
+                    if(val < biomes[id].items[w].dropChance && units[unitx,unity].isOccupied == false){
+                        units[unitx,unity].Item = biomes[id].items[w];
+                    
+                        units[unitx,unity].isOccupied = true;
+
+                        GameObject item_go = Instantiate(worldItemDictionary["ItemPickup"],Vector3.zero,Quaternion.identity);
+                        item_go.name = units[unitx,unity].Item.name;
+                        item_go.transform.SetParent(item_parent.transform);
+                        item_go.transform.position = new Vector3(unitx*4,0f,unity*4);
+
+                        ItemPickup itemPickup = item_go.GetComponent<ItemPickup>();
+                        itemPickup.item = units[x*i,y*j].Item;
+                        itemPickup.Setup();
+                        
+                        itemPickup.item = units[unitx,unity].Item;
+
+                        item_go.GetComponentInChildren<SpriteRenderer>().sprite = itemPickup.sprites[item_go.name][Random.Range(0,itemPickup.sprites[item_go.name].Count)];
+                        item_go.GetComponentInChildren<SpriteRenderer>().sortingOrder = 1000 - units[unitx,unity].Y*2;
+
+
+                    }
+                }
+                }
+
+                //Render mogwaiSpanwers
+               /*if(biomes[id].mogwaispawner.Count > 0){
+                    
+                } */ 
+               
+
+
+            }
+        }
+
+        }
     }
-    }
-    
 
 }
+
+
+
+
+
 
 
 public void FinishUp(){

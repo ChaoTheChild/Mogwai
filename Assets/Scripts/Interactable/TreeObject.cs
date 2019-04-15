@@ -7,9 +7,15 @@ public class TreeObject : ObjectDestroy
     Animator treeAnimator;
 
     int attackDamage;
-    public override void Start(){
-         base.Start();
+
+
+    
+    public override void Setup(){
+         base.Setup();
+
           treeAnimator = GetComponent<Animator>();
+
+          sprites = ResourceManagement.SetUpSpriteDictionary("Sprites/World/Nature/Trees",sprites);
     }
     
       

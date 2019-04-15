@@ -1,9 +1,14 @@
 ﻿
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public abstract class Object : ScriptableObject
 {
     public int health;
+
+   //public List<Sprite> sprites;
+
     public Item[] dropItems;
     public GameObject dropped;
     [Range (0,1)]

@@ -16,5 +16,5 @@ MonoBehaviour:
   dropItems:
   - {fileID: 11400000, guid: 0fb2b342834a9434abe483964998b93f, type: 2}
   dropped: {fileID: 1008016146726294791, guid: 24e6fc02687de554d846bca3accdcdcd, type: 3}
-  bornChance: 0.11
+  bornChance: 0.08
   bornNum: 0

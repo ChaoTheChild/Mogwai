@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: db104e3503e694360aa7c7872cea8c17
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: RagingRedLotus BB
+  fontNames:
+  - RagingRedLotus BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b35c7ee9d1fdd4873bfaff537ede4403, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

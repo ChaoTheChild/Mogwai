@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   biomeName: Porcelain
   Type: 2
-  trees: []
+  trees:
+  - {fileID: 11400000, guid: 7cf79adb54c364e65a039b68ff2abba7, type: 2}
+  - {fileID: 11400000, guid: 7de00c17d405145c79595e650c8d0136, type: 2}
+  items:
+  - {fileID: 11400000, guid: 7e733eafa344c41348761dd7fe2ba2a4, type: 2}
   mogwais: []

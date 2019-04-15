@@ -7,7 +7,6 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public int stackNum = 10;
     
-    public bool isYin;
     [Range (0,1)]
     public float dropChance;
     public Biome bornBiome;

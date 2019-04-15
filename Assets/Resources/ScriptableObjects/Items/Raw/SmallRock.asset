@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba24f20be0b892740a26facf6fae32e5, type: 3}
   m_Name: SmallRock
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 80934484b9943475fa0374308387276a, type: 3}
+  icon: {fileID: 21300000, guid: 9aa3fd41e2a031444ba9e8283e9049af, type: 3}
   stackNum: 10
-  isYin: 0
-  dropChance: 0.15
+  dropChance: 0.01
   bornBiome: {fileID: 0}

@@ -33,7 +33,6 @@ public class Monster : Character
      float chaseCd;
 
     bool canAttack = true;
-    bool canChase = true;
 
     Animator monsterAnimator;
     // Start is called before the first frame update
@@ -85,7 +84,6 @@ public class Monster : Character
 //        Debug.Log(curStat);
         React();
         FindPlayer();
-        UpdateSprite();
     }
     
 
@@ -138,25 +136,31 @@ public class Monster : Character
         if(idleDir == IdleDir.RIGHT){
              if(transform.position.x < bornLocation.x+Random.Range(4,10)){
                  dir = new Vector3(1,0,0);
+                              this.transform.localScale = new Vector3(1,1,1);
+
              }else{
                  idleDir = IdleDir.UP;
              }
         }else if(idleDir ==  IdleDir.UP){
              if(transform.position.y < bornLocation.x +Random.Range(4,10)){
                dir = new Vector3(0,0,1);
+               UpdateSprite();
             }else {
                 idleDir = IdleDir.LEFT;
             }
         }else if (idleDir== IdleDir.LEFT){
             if(transform.position.x > bornLocation.x-Random.Range(4,10)){
-                 dir = new Vector3(1,0,0);
+                 dir = new Vector3(-1,0,0);
+            this.transform.localScale = new Vector3(1,1,1);
+             UpdateSprite();
+
 
             }else{
                  idleDir = IdleDir.DOWN;
             }
         }else if(idleDir== IdleDir.DOWN){
              if(transform.position.y > bornLocation.y-Random.Range(4,10)){
-                 dir = new Vector3(0,0,1);
+                 dir = new Vector3(0,0,-1);
 
             }else{
                  idleDir = IdleDir.RIGHT;
@@ -167,17 +171,23 @@ public class Monster : Character
 
 
     void Chase(){
-        if(canChase == true){
-            canChase = false;
-            StartCoroutine("ReChase");
             if(GameObject.Find("Player")){
            Vector3 target = GameObject.Find("Player").transform.position;
         monsterAnimator.SetInteger("Stat",1);
         speedMultiplier = mogwai.chaseSpeed/speed;
         dir = target - transform.position;
-        Move();
-       }
+        if(dir.x > 0 ){
+             this.transform.localScale = new Vector3(1,1,1);
+ 
+        }else{
+         this.transform.localScale = new Vector3(-1,1,1);
+
         }
+        Move();
+         UpdateSprite();
+
+       }
+        
     }
 
 
@@ -186,9 +196,11 @@ public class Monster : Character
             canAttack = false;
             StartCoroutine("ReAttack");
             if(GameObject.Find("Player")){
-            Player player = GameObject.Find("Player").GetComponent<Player>();
             monsterAnimator.SetInteger("Stat",2);
+
+            Player player = GameObject.Find("Player").GetComponent<Player>();
             player.TakeDamage(baseDamage);
+
 
             }
         }
@@ -196,11 +208,7 @@ public class Monster : Character
 
     }
 
-    IEnumerator ReChase(){
-        yield return new WaitForSeconds(chaseCd);
-       // monsterAnimator.SetInteger("Stat",0);
-        canChase = true;
-    }
+  
     IEnumerator ReAttack(){
         yield return new WaitForSeconds(attackCd);
         canAttack = true;
@@ -213,14 +221,8 @@ public class Monster : Character
     }
 
     public virtual void UpdateSprite(){
-//        Debug.Log(spriteRenderer);
 
-        if(idleDir == IdleDir.LEFT){
-            this.transform.localScale = new Vector3(-1,1,1);
-        }else if(idleDir == IdleDir.RIGHT){
-            this.transform.localScale = new Vector3(1,1,1);
-            }         
-    
     }
+
 
 }

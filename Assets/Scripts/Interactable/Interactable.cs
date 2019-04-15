@@ -8,8 +8,20 @@ public class Interactable : MonoBehaviour
     Transform player;
     public Weapon interactObject;
 
+    public Dictionary<string, List<Sprite>> sprites;
+
+
+
+
+    void Start(){
+        Debug.Log("Interactable Start");
+    }
     public virtual void Interact(){
         
+    }
+
+    public virtual void Setup(){
+        sprites =  new Dictionary<string, List<Sprite>>();
     }
 
 

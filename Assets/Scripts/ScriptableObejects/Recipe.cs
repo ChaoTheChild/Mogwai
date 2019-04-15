@@ -5,14 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Recipe", menuName = "Crafting/Recipe")]
 public class Recipe : ScriptableObject
 {
-    public Item yinItem;
-
-    public int yinNum;
-
-    public Item yangItem;
-
     [SerializeField]
-    public int yangNum;
+     List<Item> resources;
 
     [SerializeField]
     Item result;
